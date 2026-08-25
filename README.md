@@ -7,6 +7,7 @@
 把散乱的跑团转写，变成不会失忆的长期冒险编年史。
 
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)](https://github.com/openai/codex)
+[![skills.sh](https://img.shields.io/badge/skills.sh-install-7c3aed?style=flat-square)](https://skills.sh/yuzilan/dnd-replay/dnd-replay)
 [![GitHub Stars](https://img.shields.io/github/stars/yuzilan/dnd-replay?style=flat-square)](https://github.com/yuzilan/dnd-replay/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c3aed?style=flat-square)](LICENSE)
 
