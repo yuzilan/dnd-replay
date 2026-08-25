@@ -1,0 +1,4 @@
+interface:
+  display_name: "D&D 跑团战报编年史"
+  short_description: "从转写重建好读、准确的战报，并持续维护战役状态"
+  default_prompt: "使用 $dnd-replay 将这次跑团转写整理为完整、好读的冒险编年史，并更新连续性账本。"
