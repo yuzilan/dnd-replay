@@ -1,6 +1,6 @@
 ---
 name: dnd-replay
-description: "根据 D&D 跑团转写、聊天记录、战斗日志、笔记、角色资料和模组资料，忠实重建每回战报并持续维护战役编年史。用于整理跑团记录、更新 Campaign Ledger、检查连续性或查询历史；不用于虚构或补完玩家没有实际经历的剧情。"
+description: "Use when reconstructing D&D/TTRPG session transcripts, chat logs, combat logs, notes, character data, or module references into accurate session recaps and persistent campaign chronicles; also for continuity checks and campaign-history queries. 用于忠实整理跑团战报、维护长期战役状态与查询历史，不用于虚构玩家未经历的剧情。"
 ---
 
 # D&D 跑团战报与冒险编年史

@@ -4,7 +4,7 @@
 
 ### D&D Campaign Replay & Chronicle Skill
 
-把散乱的跑团转写，重建成可持续几十回的冒险编年史。
+把散乱的跑团转写，变成不会失忆的长期冒险编年史。
 
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)](https://github.com/openai/codex)
 [![GitHub Stars](https://img.shields.io/github/stars/yuzilan/dnd-replay?style=flat-square)](https://github.com/yuzilan/dnd-replay/stargazers)
@@ -13,6 +13,8 @@
 **Transcript → Adventure Reconstruction → Session Report → Campaign State → Persistent Chronicle**
 
 </div>
+
+![dnd-replay — Transcript to Persistent Campaign Chronicle](assets/social-preview.png)
 
 ---
 
@@ -31,7 +33,16 @@
 
 ## Install
 
-### Codex
+### Skills CLI · 推荐
+
+```bash
+npx skills add yuzilan/dnd-replay -g -a codex
+```
+
+<details>
+<summary>其他安装方式</summary>
+
+#### Codex Skill Installer
 
 在 Codex 中发送：
 
@@ -39,11 +50,13 @@
 $skill-installer 从 GitHub 仓库 https://github.com/yuzilan/dnd-replay 安装根目录的 Skill，名称设为 dnd-replay。
 ```
 
-### Git
+#### Git
 
 ```bash
 git clone https://github.com/yuzilan/dnd-replay.git ~/.codex/skills/dnd-replay
 ```
+
+</details>
 
 安装后，在新任务中使用 `$dnd-replay`。
 
@@ -64,6 +77,14 @@ $dnd-replay
 ```
 
 如果资料不足，Skill 会先补问必要信息；已经提供的内容不会重复询问。
+
+### See It Work
+
+仓库内提供一组完全虚构的 Before / After：
+
+- [`sample-transcript.txt`](examples/sample-transcript.txt) — 带有混合发言、战斗与识别错误的原始转写
+- [`sample-session-report.md`](examples/sample-session-report.md) — 重建后的读者向战报
+- [`sample-campaign-ledger.md`](examples/sample-campaign-ledger.md) — 可供后续回合延续的长期状态
 
 ### 你可以提供
 
@@ -198,6 +219,11 @@ $dnd-replay 汇总目前关于阿瑟瑞克的已确认线索、玩家推测和�
 dnd-replay/
 ├── SKILL.md
 ├── agents/openai.yaml
+├── assets/social-preview.png
+├── examples/
+│   ├── sample-transcript.txt
+│   ├── sample-session-report.md
+│   └── sample-campaign-ledger.md
 └── references/
     ├── campaign-state.md
     ├── chronicle-style.md
