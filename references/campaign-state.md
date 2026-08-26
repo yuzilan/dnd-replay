@@ -28,7 +28,7 @@ dnd-campaigns/<campaign-slug>/
 
 首次写入前说明将使用的档案路径。已有档案时在原档案中继续维护，不得另建一份互相竞争的状态。保留用户已有格式和无关文件。
 
-`sources/` 用于保存按回合分类的原始转写、战斗日志和玩家/DM 笔记；`sessions/` 保存可持续维护且推荐优先查看的 Markdown 战报主档；`exports/` 保存 Word、PDF 或 TXT 交付版本。未指定格式时默认生成 Markdown + Word + PDF；TXT 仅在用户要求时生成。用户明确不保留 Markdown 主档时，可以只生成 `exports/` 中的交付文件。原始 Campaign 资料不得放进 Skill 安装目录 `~/.codex/skills/dnd-replay`。
+`sources/` 用于保存按回合分类的原始转写、战斗日志和玩家/DM 笔记；`sessions/` 保存每回必备、可持续维护且推荐优先查看的 Markdown 战报主档；`exports/` 只保存用户要求的 Word、PDF 或 TXT 附加版本。原始 Campaign 资料不得放进 Skill 安装目录 `~/.codex/skills/dnd-replay`。
 
 除非用户明确要求，不复制、移动、改名或修改原始转写。原始文件已经位于其他工作区路径时直接读取原位置，不强制迁入 `sources/`。可以在每回战报的元数据中记录来源文件名或相对路径，便于以后追溯。
 
@@ -45,9 +45,10 @@ dnd-campaigns/<campaign-slug>/
 - 当前进度：第几回 / 第几幕 / 第几章
 - 玩家人数：
 - DM 信息：可选
+- Campaign 主要语言：中文 / English / 其他
 - 转写说话人约定：
-- 战报交付格式：默认 Markdown + Word + PDF / 对话 / 单一格式 / 含 TXT 的自定义组合
-- Markdown 主档：保留 / 不保留
+- Markdown 主档：固定保留
+- 附加导出格式：无 / Word / PDF / TXT / 自定义组合
 - 文件版式偏好：可选
 
 ## 玩家角色
@@ -67,6 +68,8 @@ dnd-campaigns/<campaign-slug>/
 模组简介只属于背景资料。除非跑团记录另外证明玩家已经得知或经历，否则不得放入“本团已发生”或“玩家已知信息”。
 
 首次建档时保存用户确认的交付格式。后续回合沿用该偏好；用户临时指定其他格式时，以本回明确要求为准，并只在用户表示要长期改变时更新 Profile。
+
+本文件中的 Profile 与 Ledger 模板以中文展示，但字段语义才是固定内容。英文 Campaign 应将标题和字段自然本地化为 English，并在后续回合保持同一语言；不要生成中英字段各写一遍的冗余档案。
 
 ## 首次处理所需的最低信息
 

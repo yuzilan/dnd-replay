@@ -1,5 +1,7 @@
 <div align="center">
 
+[简体中文](README.md) · [English](README_EN.md)
+
 # 🎲 dnd-replay
 
 ### D&D Campaign Replay & Chronicle Skill
@@ -30,7 +32,7 @@
 | 🎭 | 混合音轨与说话人识别 | 📚 | 长模组连续档案 |
 | ⚔️ | 剧情、战斗与资源重建 | 🧩 | 线索、推测与谜团分层 |
 | 🧙 | 按实际 PC 人数逐角整理 | 🔗 | NPC、物品与地点跨回串联 |
-| 🛡️ | 不编造缺失事实 | 📄 | Markdown / Word / PDF / TXT |
+| 🛡️ | 不编造缺失事实 | 📄 | 必备 Markdown + 按需导出 |
 
 ## Install
 
@@ -72,7 +74,7 @@ $dnd-replay
 类型：长模组
 进度：第 1 回
 角色：玩家名｜角色名｜种族｜职业｜等级
-输出：Markdown + Word + PDF
+附加导出：PDF（可选；Markdown 主档会自动生成）
 
 请整理附件 transcript.txt，并为后续回合建立 Campaign Profile 与 Ledger。
 ```
@@ -132,7 +134,7 @@ $dnd-replay
 模组名称：湮灭之墓
 模组类型：长模组
 当前进度：第 1 回
-战报格式：Markdown + Word + PDF，并保留 Markdown 作为长期主档
+附加导出格式：PDF
 玩家角色：
 - 甘道夫｜剑咏法师 | 2级
 - 加坦杰厄｜幽影术士 / 厨师 | 2级
@@ -191,12 +193,26 @@ $dnd-replay 汇总目前关于阿瑟瑞克的已确认线索、玩家推测和�
 
 | 格式 | 适合用途 |
 | --- | --- |
-| Markdown | **推荐优先查看**；内容主档、长期维护与版本管理 |
-| Word | 编辑、批注与分享 |
-| PDF | 阅读、打印与固定版式发布 |
-| TXT | 纯文本与最大兼容性 |
+| Markdown | **每回固定生成**；推荐阅读、事实主档与长期维护 |
+| Word | 按需附加；编辑、批注与分享 |
+| PDF | 按需附加；阅读、打印与固定版式发布 |
+| TXT | 按需附加；纯文本与最大兼容性 |
 
-未指定格式时，Skill 会询问一次，并推荐同时生成 Markdown + Word + PDF。Markdown 是内容最稳定的主档；Word/PDF 受字体、分页和转换引擎影响，偶尔可能出现轻微版式偏差。完成后 Skill 会列出三种文件的准确位置。
+Markdown 不是可取消的导出选项：只要生成一回战报，就一定写入 `.md` 主档。未指定附加格式时默认只生成 Markdown；即使要求“只要 PDF”，也会保留 Markdown，再额外导出 PDF。
+
+### 在本地转换，通常更省 Token
+
+如果暂时不需要固定版式，建议先让 Skill 只生成 Markdown。之后可用 Typora、Obsidian、VS Code 插件或 Pandoc 在本地导出 Word/PDF，减少让模型重复排版和逐页校验的额外开销：
+
+```bash
+pandoc session-001.md -o session-001.docx
+```
+
+PDF 对中文字体和转换引擎更敏感，推荐使用 Markdown 编辑器的“导出 PDF / 打印为 PDF”。需要 Skill 直接生成时，在提示中写 `附加导出：PDF` 或 `附加导出：Word + PDF`。
+
+## Language
+
+同一个 `dnd-replay` 同时支持中文和英文 Campaign，无需安装两个版本。输出语言按“用户明确指定 > 当前请求语言 > 转写主要语言”决定，并在 Campaign Profile 中保持后续回合一致。英文转写会使用英文栏目与英文叙事，不会先翻译成中文再处理。
 
 ## Trust Model
 
@@ -219,6 +235,8 @@ $dnd-replay 汇总目前关于阿瑟瑞克的已确认线索、玩家推测和�
 ```text
 dnd-replay/
 ├── SKILL.md
+├── README.md
+├── README_EN.md
 ├── agents/openai.yaml
 ├── assets/social-preview.png
 ├── examples/

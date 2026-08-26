@@ -4,6 +4,25 @@
 
 严格保持八个编号栏目及最后的队伍状态摘要。固定的是信息架构，不是会议纪要式措辞。某栏没有内容时简洁写明 `本回无`、`未记录` 或 `无法确认`。
 
+## 语言本地化
+
+栏目结构固定，但标题语言跟随 Campaign 的主要语言。英文 Campaign 使用自然英文叙事，并采用以下对应标题：
+
+| 中文 | English |
+| --- | --- |
+| 剧情经过 | Story Recap |
+| 各角色做了什么 | Character Highlights |
+| 战斗记录 | Combat Log |
+| 获得的装备 / 金钱 | Loot & Finances |
+| NPC 关系变化 | NPC Relationship Changes |
+| 已知线索 | Known Clues |
+| 未解谜团 | Unresolved Mysteries |
+| 本回名场面 | Memorable Moments |
+| 本回结束时的队伍状态 | End-of-Session Party Status |
+| 本回结语 | Closing Chronicle |
+
+事实等级也要自然本地化，例如 `已确认 / Confirmed`、`玩家推测 / Player Theory`、`无法确定 / Uncertain`、`模组背景 / Module Background`。不要在英文战报中机械保留中文标题，也不要把英文专有名词先翻译成中文再译回英文。
+
 # 《Campaign 名称》冒险战报
 
 ## 第 X 回：有辨识度的回合标题
