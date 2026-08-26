@@ -13,7 +13,7 @@ dnd-campaigns/<campaign-slug>/
 ├── exports/
 │   ├── session-001.docx
 │   ├── session-001.pdf
-│   └── session-001.txt
+│   └── session-001.txt        # 仅在用户要求时
 ├── sources/
 │   ├── session-001/
 │   │   ├── transcript.txt
@@ -28,7 +28,7 @@ dnd-campaigns/<campaign-slug>/
 
 首次写入前说明将使用的档案路径。已有档案时在原档案中继续维护，不得另建一份互相竞争的状态。保留用户已有格式和无关文件。
 
-`sources/` 用于保存按回合分类的原始转写、战斗日志和玩家/DM 笔记；`sessions/` 保存可持续维护的 Markdown 战报主档；`exports/` 保存用户要求的 Word、PDF 或 TXT 交付版本。用户明确不保留 Markdown 主档时，可以只生成 `exports/` 中的交付文件。原始 Campaign 资料不得放进 Skill 安装目录 `~/.codex/skills/dnd-replay`。
+`sources/` 用于保存按回合分类的原始转写、战斗日志和玩家/DM 笔记；`sessions/` 保存可持续维护且推荐优先查看的 Markdown 战报主档；`exports/` 保存 Word、PDF 或 TXT 交付版本。未指定格式时默认生成 Markdown + Word + PDF；TXT 仅在用户要求时生成。用户明确不保留 Markdown 主档时，可以只生成 `exports/` 中的交付文件。原始 Campaign 资料不得放进 Skill 安装目录 `~/.codex/skills/dnd-replay`。
 
 除非用户明确要求，不复制、移动、改名或修改原始转写。原始文件已经位于其他工作区路径时直接读取原位置，不强制迁入 `sources/`。可以在每回战报的元数据中记录来源文件名或相对路径，便于以后追溯。
 
@@ -46,7 +46,7 @@ dnd-campaigns/<campaign-slug>/
 - 玩家人数：
 - DM 信息：可选
 - 转写说话人约定：
-- 战报交付格式：对话 / Markdown / Word / PDF / TXT / 多格式
+- 战报交付格式：默认 Markdown + Word + PDF / 对话 / 单一格式 / 含 TXT 的自定义组合
 - Markdown 主档：保留 / 不保留
 - 文件版式偏好：可选
 

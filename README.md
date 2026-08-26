@@ -72,20 +72,20 @@ $dnd-replay
 类型：长模组
 进度：第 1 回
 角色：玩家名｜角色名｜种族｜职业｜等级
-输出：Markdown + PDF
+输出：Markdown + Word + PDF
 
 请整理附件 transcript.txt，并为后续回合建立 Campaign Profile 与 Ledger。
 ```
 
 如果资料不足，Skill 会先补问必要信息；已经提供的内容不会重复询问。
 
-### See It Work
+### See It Work · 真实案例
 
-仓库内提供一组完全虚构的 Before / After：
+仓库内收录一组经用户授权公开的《湮灭之墓》第一回 Before / After：
 
-- [`sample-transcript.txt`](examples/sample-transcript.txt) — 带有混合发言、战斗与识别错误的原始转写
-- [`sample-session-report.md`](examples/sample-session-report.md) — 重建后的读者向战报
-- [`sample-campaign-ledger.md`](examples/sample-campaign-ledger.md) — 可供后续回合延续的长期状态
+- [`session-01-transcript.txt`](examples/tomb-of-annihilation/session-01-transcript.txt) — 单一说话人标签的原始会议转写
+- [`session-001-report.md`](examples/tomb-of-annihilation/session-001-report.md) — 从混合音轨重建的完整战报
+- [`campaign-ledger.md`](examples/tomb-of-annihilation/campaign-ledger.md) — 第一回结束后的长期连续性账本
 
 ### 你可以提供
 
@@ -132,7 +132,7 @@ $dnd-replay
 模组名称：湮灭之墓
 模组类型：长模组
 当前进度：第 1 回
-战报格式：Markdown + PDF，并保留 Markdown 作为长期主档
+战报格式：Markdown + Word + PDF，并保留 Markdown 作为长期主档
 玩家角色：
 - 甘道夫｜剑咏法师 | 2级
 - 加坦杰厄｜幽影术士 / 厨师 | 2级
@@ -191,12 +191,12 @@ $dnd-replay 汇总目前关于阿瑟瑞克的已确认线索、玩家推测和�
 
 | 格式 | 适合用途 |
 | --- | --- |
-| Markdown | 长期维护与版本管理 |
+| Markdown | **推荐优先查看**；内容主档、长期维护与版本管理 |
 | Word | 编辑、批注与分享 |
 | PDF | 阅读、打印与固定版式发布 |
 | TXT | 纯文本与最大兼容性 |
 
-未指定格式时，Skill 会在正式生成文件前询问；长模组可保留 Markdown 主档，再导出其他格式。
+未指定格式时，Skill 会询问一次，并推荐同时生成 Markdown + Word + PDF。Markdown 是内容最稳定的主档；Word/PDF 受字体、分页和转换引擎影响，偶尔可能出现轻微版式偏差。完成后 Skill 会列出三种文件的准确位置。
 
 ## Trust Model
 
@@ -222,9 +222,10 @@ dnd-replay/
 ├── agents/openai.yaml
 ├── assets/social-preview.png
 ├── examples/
-│   ├── sample-transcript.txt
-│   ├── sample-session-report.md
-│   └── sample-campaign-ledger.md
+│   └── tomb-of-annihilation/
+│       ├── session-01-transcript.txt
+│       ├── session-001-report.md
+│       └── campaign-ledger.md
 └── references/
     ├── campaign-state.md
     ├── chronicle-style.md

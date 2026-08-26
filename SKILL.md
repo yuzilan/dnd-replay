@@ -44,11 +44,11 @@ description: "Use when reconstructing D&D/TTRPG session transcripts, chat logs, 
 - 当前是第几回、第几幕或第几章；
 - 实际玩家角色名单：玩家名、角色名、种族、职业/子职业、等级和重要背景（已知多少记录多少）；
 - 转写的说话人标注情况；必要时确认由模型自动推断，还是由用户提供“说话人 → 玩家/角色”映射。
-- 战报交付格式：对话内输出、Markdown (`.md`)、Word (`.docx`)、PDF (`.pdf`)、纯文本 (`.txt`) 或同时输出多种格式。
+- 战报交付格式。未指定时只需询问一次，并把 `Markdown + Word + PDF` 作为推荐选项；也可选择对话内输出、单一格式或纯文本 (`.txt`)。
 
-模组简介、DM 信息和额外世界设定是可选项。用户已经提供的信息不得重复询问。用户已明确格式时不得再问；未指定且任务要生成文件时，必须在正式制作前用一个简短问题确认格式。可以与其他首次建档问题合并，避免多轮盘问。
+模组简介、DM 信息和额外世界设定是可选项。用户已经提供的信息不得重复询问。用户已明确格式时不得再问；未指定且任务要生成文件时，必须在正式制作前用一个简短问题确认格式。推荐说法是：“默认同时生成 Markdown、Word 和 PDF；Markdown 是最稳定、也最适合长期维护的主档。你接受这个组合吗？”可以与其他首次建档问题合并，避免多轮盘问。
 
-长模组选择 Word、PDF 或 TXT 时，建议同时保留 Markdown 作为可持续更新的主档，再导出用户需要的交付格式；这是建议而非强制。用户明确不要 Markdown 时遵从其选择。将格式偏好写入 Campaign Profile，后续回合默认沿用，除非用户本回另有要求。
+用户接受推荐、回答“都可以”或没有进一步偏好时，文件交付默认同时生成 Markdown、Word 和 PDF。Markdown 是可持续维护的唯一内容主档；Word 与 PDF 必须从同一份已核对内容导出。用户明确只要某种格式或明确排除某种格式时遵从其选择。将格式偏好写入 Campaign Profile，后续回合默认沿用，除非用户本回另有要求。
 
 建立档案或维护长期状态时，读取 [references/campaign-state.md](references/campaign-state.md)。
 
@@ -60,7 +60,7 @@ description: "Use when reconstructing D&D/TTRPG session transcripts, chat logs, 
 4. 与此前状态逐项对照。发现冲突时公开标记，不得静默改写旧记录。
 5. 读取 [references/chronicle-style.md](references/chronicle-style.md)，先确定本回的叙事主线、场景切分、角色高光、重要台词和能够由事实支持的开头—结尾呼应。
 6. 按 [references/report-format.md](references/report-format.md) 生成读者向战报。默认输出完整编年史；只有用户明确要求时才压缩为简报。
-7. 读取 [references/output-formats.md](references/output-formats.md)，按照已确认的格式生成文件。不得只改扩展名；Markdown、Word、PDF 与 TXT 要使用适合各自媒介的结构。
+7. 读取 [references/output-formats.md](references/output-formats.md)，按照已确认的格式生成文件。默认文件组合为 Markdown + Word + PDF；不得只改扩展名，各格式要使用适合各自媒介的结构。
 8. 对战报做一次“事实与阅读体验”双重检查，并对 Word/PDF 做视觉验证，再只用有来源支持的事实更新 Campaign Ledger；冲突和不确定项继续保留，等待用户确认。
 
 长模组默认持续维护状态，除非用户明确只要一次性输出。短模组或单回冒险可以使用精简状态；用户要求时再维护完整 Ledger。
@@ -96,3 +96,5 @@ description: "Use when reconstructing D&D/TTRPG session transcripts, chat logs, 
 默认使用第二人称复数“你们”重现桌上经历，按地点、目标、冲突或情绪转折充分切分场景。保留有意义的原话、玩家选择、失败、后果、桌上笑点和角色高光；技术性时间戳、来源异文和大量不确定说明应移入简短整理说明或 Ledger，不得压在剧情开头。
 
 固定八个栏目都要输出；无内容时简洁写明 `本回无`、`未记录` 或 `无法确认`。角色栏目必须以 Campaign Profile 中的实际 PC 名单为准：有几名 PC 就写几名，既不补齐固定人数，也不漏掉没有造成伤害的角色。完整战报默认以一段有事实依据的“本回结语”收束；不得为了制造主题而发明人物动机或剧情。
+
+文件交付完成后，必须在回复结尾按以下顺序列出准确路径：推荐阅读的 Markdown 主档、Word、PDF，以及用户另外要求的 TXT。明确说明 Markdown 是内容最稳定、最适合核对与长期维护的推荐格式；Word/PDF 因字体、分页和转换引擎差异，偶尔会出现轻微版式偏差。不得只说“已生成”而不告诉用户文件在哪里。
